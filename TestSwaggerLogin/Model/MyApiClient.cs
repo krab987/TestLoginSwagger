@@ -23,7 +23,7 @@ namespace TestSwaggerLogin.Model
                     responseData = await response.Content.ReadAsStringAsync();
                 }
             }
-            MessageBox.Show(response.StatusCode.ToString(), "Result", MessageBoxButton.OK, MessageBoxImage.Information);
+            //MessageBox.Show(response.StatusCode.ToString(), "Result", MessageBoxButton.OK, MessageBoxImage.Information);
             
             return response;
         }
