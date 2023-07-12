@@ -15,8 +15,18 @@ namespace TestSwaggerLogin.View
         }
         private void Login_Click(object sender, RoutedEventArgs e)
         {
-            MyApiClient apiClient = new MyApiClient();
-            var res = apiClient.PostLogin("https://traceavit-pro.azurewebsites.net/api/user/login/" + tbLogin.Text);
+            try
+            {
+                MyApiClient apiClient = new MyApiClient();
+                var res = apiClient.PostLogin("https://traceavit-pro.azurewebsites.net/api/user/login/" + tbLogin.Text);
+                var stat = res.Result.StatusCode;
+                if (stat != HttpStatusCode.OK)
+                    throw new Exception(stat.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
         }
     }
     

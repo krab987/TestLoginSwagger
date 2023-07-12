@@ -13,7 +13,7 @@ namespace TestSwaggerLogin.Model
             _client = new HttpClient();
         }
         
-        public async Task<string> PostLogin(string requestUri)
+        public async Task<HttpResponseMessage> PostLogin(string requestUri)
         {
             string responseData;
             HttpResponseMessage response;
@@ -25,7 +25,7 @@ namespace TestSwaggerLogin.Model
             }
             MessageBox.Show(response.StatusCode.ToString(), "Result", MessageBoxButton.OK, MessageBoxImage.Information);
             
-            return responseData;
+            return response;
         }
     }
 }
