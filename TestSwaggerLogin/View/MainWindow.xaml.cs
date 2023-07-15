@@ -1,12 +1,7 @@
-﻿using System.Windows;
-using System.Windows.Navigation;
-using TestSwaggerLogin.View.Pages;
-using TestSwaggerLogin.ViewModel;
-
-namespace TestSwaggerLogin
+﻿namespace TestSwaggerLogin.View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    ///     Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow
     {

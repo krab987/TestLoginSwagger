@@ -15,6 +15,7 @@
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
           "Microsoft.Extensions.Configuration": "8.0.0-preview.6.23329.7",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0-preview.6.23329.7",
+          "Microsoft.VisualStudio.Designer.Interfaces": "17.6.36389",
           "ModernUI.WPF": "1.0.9",
           "NSwag.SwaggerGeneration": "12.3.0",
           "System.Runtime.InteropServices": "4.3.0",
@@ -148,6 +149,25 @@
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
+      "Microsoft.VisualStudio.Designer.Interfaces/17.6.36389": {
+        "dependencies": {
+          "Microsoft.VisualStudio.Interop": "17.6.36389"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.VisualStudio.Designer.Interfaces.dll": {
+            "assemblyVersion": "17.0.0.0",
+            "fileVersion": "17.6.36389.36139"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.Interop/17.6.36389": {
+        "runtime": {
+          "lib/net6.0/Microsoft.VisualStudio.Interop.dll": {
+            "assemblyVersion": "17.0.0.0",
+            "fileVersion": "17.6.36387.1155"
+          }
+        }
+      },
       "Microsoft.Xaml.Behaviors.Wpf/1.1.39": {
         "runtime": {
           "lib/net5.0-windows7.0/Microsoft.Xaml.Behaviors.dll": {
@@ -648,6 +668,20 @@
       "sha512": "sha512-aOZA3BWfz9RXjpzt0sRJJMjAscAUm3Hoa4UWAfceV9UTYxgwZ1lZt5nO2myFf+/jetYQo4uTP7zS8sJY67BBxg==",
       "path": "microsoft.netcore.targets/1.1.0",
       "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
+    },
+    "Microsoft.VisualStudio.Designer.Interfaces/17.6.36389": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vOXuyFlfXCTLM++RlEJ4NvMlSKktlZh7hNxtE8bXn59ANbc0ZfL3I5i+Z5yj8LW6bVKTYjYYmx3smZfvlR1tzg==",
+      "path": "microsoft.visualstudio.designer.interfaces/17.6.36389",
+      "hashPath": "microsoft.visualstudio.designer.interfaces.17.6.36389.nupkg.sha512"
+    },
+    "Microsoft.VisualStudio.Interop/17.6.36389": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XIuDWL5EW6w6Ybd6+6QkjtIaoE+QlTbHyPb0bKP4lu3Mo6HfN2e2Nb92l2cCRQdVxGyqKcS0H6S2N8XRu3hEVw==",
+      "path": "microsoft.visualstudio.interop/17.6.36389",
+      "hashPath": "microsoft.visualstudio.interop.17.6.36389.nupkg.sha512"
     },
     "Microsoft.Xaml.Behaviors.Wpf/1.1.39": {
       "type": "package",

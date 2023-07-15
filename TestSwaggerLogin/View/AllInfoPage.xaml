@@ -1,0 +1,33 @@
+﻿<Page x:Class="TestSwaggerLogin.View.AllInfoPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d"
+      Title="AllInfoPage" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="5*" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0"
+                    Margin="10">
+            <TextBlock Text="name" />
+            <TextBlock Text="surname" />
+            <TextBlock Text="roles" />
+            <TextBlock Text="number" />
+            <TextBlock Text="authenticated" />
+            <TextBlock Text="isvalid" />
+        </StackPanel>
+        <StackPanel Grid.Column="1"
+                    Margin="10">
+            <TextBlock Text="{Binding CurrentUser.name}" />
+            <TextBlock Text="{Binding CurrentUser.surname}" />
+            <ListView ItemsSource="{Binding CurrentUser.roles}" />
+            <TextBlock Text="{Binding CurrentUser.number}" />
+            <TextBlock Text="{Binding CurrentUser.authenticated}" />
+            <TextBlock Text="{Binding CurrentUser.isvalid}" />
+        </StackPanel>
+    </Grid>
+</Page>

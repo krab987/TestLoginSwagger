@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "PYr75IO/OkVC+UDkq0cw7lWdCDdyy2XPfhz+Ks7nVm7JggoLjY0C0xNcIR9cFz+1Tvy4+vlIE95ggsqPglJVLw==",
+  "dgSpecHash": "fWN2iguMoIw4AVCg5IiAtUcWUqXKJgIziBf81xNSxLQAYNU0dzQF4cStkS8++Q8mmMp7t2AsLIwmA2TbFLNycA==",
   "success": true,
   "projectFilePath": "W:\\projects\\C#\\.Net\\TestSwaggerLogin\\TestSwaggerLogin\\TestSwaggerLogin.csproj",
   "expectedPackageFiles": [
@@ -17,6 +17,8 @@
     "C:\\Users\\paloc\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0-preview.6.23329.7\\microsoft.extensions.primitives.8.0.0-preview.6.23329.7.nupkg.sha512",
     "C:\\Users\\paloc\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\paloc\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\paloc\\.nuget\\packages\\microsoft.visualstudio.designer.interfaces\\17.6.36389\\microsoft.visualstudio.designer.interfaces.17.6.36389.nupkg.sha512",
+    "C:\\Users\\paloc\\.nuget\\packages\\microsoft.visualstudio.interop\\17.6.36389\\microsoft.visualstudio.interop.17.6.36389.nupkg.sha512",
     "C:\\Users\\paloc\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512",
     "C:\\Users\\paloc\\.nuget\\packages\\modernui.wpf\\1.0.9\\modernui.wpf.1.0.9.nupkg.sha512",
     "C:\\Users\\paloc\\.nuget\\packages\\newtonsoft.json\\9.0.1\\newtonsoft.json.9.0.1.nupkg.sha512",

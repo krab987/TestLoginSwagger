@@ -1,9 +1,8 @@
-﻿<Page x:Class="TestSwaggerLogin.View.Pages.LoginPage"
+﻿<Page x:Class="TestSwaggerLogin.View.LoginPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-      xmlns:local="clr-namespace:TestSwaggerLogin.View.Pages"
       xmlns:viewModel="clr-namespace:TestSwaggerLogin.ViewModel"
       mc:Ignorable="d"
       Title="Login" Height="450" Width="800">
@@ -27,10 +26,8 @@
                  Foreground="Black"
                  Text="" />
         <Button Content="Вхід" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center"
-                FontFamily="Times New Roman" FontSize="26" 
+                FontFamily="Times New Roman" FontSize="26"
                 Click="Login_Click" Height="40" Width="230"
-                Padding="20,5,20,5" 
-                >
-        </Button>
+                Padding="20,5,20,5" />
     </Grid>
 </Page>

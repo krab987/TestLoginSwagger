@@ -5,7 +5,7 @@ using System.Windows.Controls;
 using TestSwaggerLogin.Model;
 using TestSwaggerLogin.ViewModel;
 
-namespace TestSwaggerLogin.View.Pages
+namespace TestSwaggerLogin.View
 {
     public partial class LoginPage : Page
     {
@@ -21,7 +21,7 @@ namespace TestSwaggerLogin.View.Pages
             {
                 if (TbLogin.Text == null)
                     throw new NullReferenceException("Argument cant be null");
-                responceMessage =  await client.Login(TbLogin.Text);
+                responceMessage = await client.Login(TbLogin.Text);
                 NavigationService.Navigate(new InfoViewModel(responceMessage));
             }
             catch (NullReferenceException ex)
@@ -40,4 +40,3 @@ namespace TestSwaggerLogin.View.Pages
         }
     }
 }
-

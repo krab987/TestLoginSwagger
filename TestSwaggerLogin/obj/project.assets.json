@@ -221,6 +221,35 @@
           "lib/netstandard1.0/_._": {}
         }
       },
+      "Microsoft.VisualStudio.Designer.Interfaces/17.6.36389": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.Interop": "17.6.36389"
+        },
+        "compile": {
+          "lib/net6.0/Microsoft.VisualStudio.Designer.Interfaces.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.VisualStudio.Designer.Interfaces.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.Interop/17.6.36389": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Microsoft.VisualStudio.Interop.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.VisualStudio.Interop.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Xaml.Behaviors.Wpf/1.1.39": {
         "type": "package",
         "compile": {
@@ -1257,6 +1286,52 @@
         "microsoft.netcore.targets.1.1.0.nupkg.sha512",
         "microsoft.netcore.targets.nuspec",
         "runtime.json"
+      ]
+    },
+    "Microsoft.VisualStudio.Designer.Interfaces/17.6.36389": {
+      "sha512": "vOXuyFlfXCTLM++RlEJ4NvMlSKktlZh7hNxtE8bXn59ANbc0ZfL3I5i+Z5yj8LW6bVKTYjYYmx3smZfvlR1tzg==",
+      "type": "package",
+      "path": "microsoft.visualstudio.designer.interfaces/17.6.36389",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "PackageIcon.png",
+        "lib/net20/Microsoft.VisualStudio.Designer.Interfaces.dll",
+        "lib/net20/Microsoft.VisualStudio.Designer.Interfaces.xml",
+        "lib/net45/Microsoft.VisualStudio.Designer.Interfaces.dll",
+        "lib/net45/Microsoft.VisualStudio.Designer.Interfaces.xml",
+        "lib/net472/Microsoft.VisualStudio.Designer.Interfaces.dll",
+        "lib/net472/Microsoft.VisualStudio.Designer.Interfaces.xml",
+        "lib/net6.0/Microsoft.VisualStudio.Designer.Interfaces.dll",
+        "lib/net6.0/Microsoft.VisualStudio.Designer.Interfaces.xml",
+        "lib/netstandard2.0/Microsoft.VisualStudio.Designer.Interfaces.dll",
+        "lib/netstandard2.0/Microsoft.VisualStudio.Designer.Interfaces.xml",
+        "microsoft.visualstudio.designer.interfaces.17.6.36389.nupkg.sha512",
+        "microsoft.visualstudio.designer.interfaces.nuspec"
+      ]
+    },
+    "Microsoft.VisualStudio.Interop/17.6.36389": {
+      "sha512": "XIuDWL5EW6w6Ybd6+6QkjtIaoE+QlTbHyPb0bKP4lu3Mo6HfN2e2Nb92l2cCRQdVxGyqKcS0H6S2N8XRu3hEVw==",
+      "type": "package",
+      "path": "microsoft.visualstudio.interop/17.6.36389",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "PackageIcon.png",
+        "lib/net20/Microsoft.VisualStudio.Interop.dll",
+        "lib/net20/Microsoft.VisualStudio.Interop.xml",
+        "lib/net45/Microsoft.VisualStudio.Interop.dll",
+        "lib/net45/Microsoft.VisualStudio.Interop.xml",
+        "lib/net472/Microsoft.VisualStudio.Interop.dll",
+        "lib/net472/Microsoft.VisualStudio.Interop.xml",
+        "lib/net6.0/Microsoft.VisualStudio.Interop.dll",
+        "lib/net6.0/Microsoft.VisualStudio.Interop.xml",
+        "lib/netstandard2.0/Microsoft.VisualStudio.Interop.dll",
+        "lib/netstandard2.0/Microsoft.VisualStudio.Interop.xml",
+        "microsoft.visualstudio.interop.17.6.36389.nupkg.sha512",
+        "microsoft.visualstudio.interop.nuspec"
       ]
     },
     "Microsoft.Xaml.Behaviors.Wpf/1.1.39": {
@@ -3510,6 +3585,7 @@
       "Microsoft.AspNetCore.Http.Abstractions >= 2.2.0",
       "Microsoft.Extensions.Configuration >= 8.0.0-preview.6.23329.7",
       "Microsoft.Extensions.DependencyInjection.Abstractions >= 8.0.0-preview.6.23329.7",
+      "Microsoft.VisualStudio.Designer.Interfaces >= 17.6.36389",
       "ModernUI.WPF >= 1.0.9",
       "NSwag.SwaggerGeneration >= 12.3.0",
       "System.Runtime.InteropServices >= 4.3.0",
@@ -3587,6 +3663,10 @@
           "Microsoft.Extensions.DependencyInjection.Abstractions": {
             "target": "Package",
             "version": "[8.0.0-preview.6.23329.7, )"
+          },
+          "Microsoft.VisualStudio.Designer.Interfaces": {
+            "target": "Package",
+            "version": "[17.6.36389, )"
           },
           "ModernUI.WPF": {
             "target": "Package",

@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace TestSwaggerLogin.View.Pages
+namespace TestSwaggerLogin.View
 {
     public partial class InfoPage : Page
     {
@@ -10,4 +10,3 @@ namespace TestSwaggerLogin.View.Pages
         }
     }
 }
-

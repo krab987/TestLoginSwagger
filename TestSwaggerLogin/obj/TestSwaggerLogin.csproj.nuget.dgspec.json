@@ -72,6 +72,10 @@
               "target": "Package",
               "version": "[8.0.0-preview.6.23329.7, )"
             },
+            "Microsoft.VisualStudio.Designer.Interfaces": {
+              "target": "Package",
+              "version": "[17.6.36389, )"
+            },
             "ModernUI.WPF": {
               "target": "Package",
               "version": "[1.0.9, )"
