@@ -28,15 +28,15 @@ namespace TestSwaggerLogin.View
             }
             catch (InvalidOperationException ex)
             {
-                MessageBox.Show(ex.Message, "InvalidOperationException", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch (TaskCanceledException ex)
             {
-                MessageBox.Show(ex.Message, "TaskCanceledException", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch (UriFormatException ex)
             {
-                MessageBox.Show(ex.Message, "UriFormatException", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch (NullReferenceException ex)
             {

@@ -5,23 +5,23 @@ namespace TestSwaggerLogin.ViewModel
 {
     public class AllInfoViewModel: ObservableObject
     {
-        private User currentUser;
+        private User _currentUser;
         public User CurrentUser
         {
             get
             {
-                return currentUser;
+                return _currentUser;
             }
             set
             {
-                currentUser = value;
+                _currentUser = value;
                 OnPropertyChanged();
             }
         }
         
         public AllInfoViewModel(User currentUser)
         {
-            CurrentUser = currentUser;
+            _currentUser = currentUser;
         }
 
     }
