@@ -14,6 +14,7 @@ namespace TestSwaggerLogin.Model
         
         private MyApiClient()
         {
+            
         }
         public async Task<string> Login (string? login)
         {
