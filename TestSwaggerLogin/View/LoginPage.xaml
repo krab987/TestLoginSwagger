@@ -19,12 +19,12 @@
             <RowDefinition Height="275*" />
         </Grid.RowDefinitions>
         <TextBox Name="TbLogin"
-                 HorizontalAlignment="Center"
                  Grid.Row="1" Width="340"
-                 VerticalAlignment="Center" VerticalContentAlignment="Center"
-                 FontFamily="Times New Roman" FontSize="22" Height="45" Cursor="Hand"
+                 FontFamily="Times New Roman" 
+                 FontSize="20"
                  Foreground="Black"
-                 Text="" />
+                 md:HintAssist.Hint="Користувач"
+                 Text="{Binding Username}" />
         <Button Content="Вхід" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center"
                 FontFamily="Times New Roman" FontSize="26" 
                 Height="40" Width="230"

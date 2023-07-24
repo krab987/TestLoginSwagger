@@ -26,8 +26,8 @@ namespace TestSwaggerLogin.ViewModel.Commands
         {
             try
             {
-                await myService.Login("Master");
-                // await myService.Login(loginViewModel.Username);
+                // await myService.Login("Master");
+                await myService.Login(loginViewModel.Username);
                 navigator.NavigateVm();
             }
             catch (HttpRequestException ex)

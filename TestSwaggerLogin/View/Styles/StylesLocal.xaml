@@ -5,6 +5,10 @@
     <!--  Style for Button  -->
     <Style TargetType="{x:Type Button}" BasedOn="{StaticResource MaterialDesignPaperDarkButton}" />
 
+    <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource MaterialDesignOutlinedTextBox}">
+        <Setter Property="FontSize" Value="22"></Setter>
+    </Style>
+
     <!--  Style for Border  -->
     <Style TargetType="Border">
         <Setter Property="CornerRadius" Value="6" />

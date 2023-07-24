@@ -12,5 +12,9 @@ namespace TestSwaggerLogin.View
             InitializeComponent();
             DataContext = viewModel;
         }
+        public MainWindow()
+        {
+            
+        }
     }
 }
