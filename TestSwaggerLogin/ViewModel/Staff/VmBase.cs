@@ -6,8 +6,10 @@ using System.Runtime.CompilerServices;
 
 namespace TestSwaggerLogin.ViewModel
 {
-    public class BaseVm: ObservableObject, INotifyPropertyChanged
+    public delegate TViewModel CreateViewModel<TViewModel>() where TViewModel : VmBase;
+    public class VmBase: ObservableObject, INotifyPropertyChanged
     {
+        public virtual void Dispose() { }
         public event PropertyChangedEventHandler? PropertyChanged;
         protected virtual void OnPropertyChanged([CallerMemberName] string? propertyName = null)
         {

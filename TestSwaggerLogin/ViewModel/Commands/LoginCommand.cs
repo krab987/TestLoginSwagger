@@ -1,48 +1,55 @@
 ﻿using DevExpress.Mvvm;
 using System;
+using System.Net.Http;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using TestSwaggerLogin.ApiForce;
 using TestSwaggerLogin.Model;
 
 namespace TestSwaggerLogin.ViewModel.Commands
 {
-    public class LoginCommand: ICommand
+    public class LoginCommand: AsyncCommandBase
     {
-        public bool CanExecute(object? parameter)
+        private LoginViewModel loginViewModel;
+        private IViewModelNavigator navigator;
+        private IMyService myService;
+        
+        public LoginCommand(LoginViewModel loginViewModel, IViewModelNavigator navigator, IMyService myService)
         {
-            return true;
+            this.loginViewModel = loginViewModel;
+            this.navigator = navigator;
+            this.myService = myService;
         }
-        public async void Execute(object? login)
+        public override async Task ExecuteAsync(object parameter)
         {
-            MyApiClient client = MyApiClient.Client;
             try
             {
-                if (login == null)
-                    throw new NullReferenceException("Argument cant be null");
-                await client.Login(login.ToString());
+                await myService.Login("Master");
+                // await myService.Login(loginViewModel.Username);
+                navigator.NavigateVm();
             }
-            catch (NullReferenceException e)
+            catch (HttpRequestException ex)
             {
-                MessageBox.Show(e.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            catch (InvalidOperationException ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            catch (TaskCanceledException ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            catch (UriFormatException ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            catch (NullReferenceException ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
-        public async void Execute(object? login, Page paveVM)
-        {
-            MyApiClient client = MyApiClient.Client;
-            try
-            {
-                if (login == null)
-                    throw new NullReferenceException("Argument cant be null");
-                await client.Login(login.ToString());
-                paveVM.NavigationService.Navigate(new InfoViewModel());
-            }
-            catch (NullReferenceException e)
-            {
-                MessageBox.Show(e.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-        }
-        public event EventHandler? CanExecuteChanged;
     }
 }

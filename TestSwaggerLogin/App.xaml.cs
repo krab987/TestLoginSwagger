@@ -1,21 +1,41 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using System.Windows;
+using TestSwaggerLogin.ApiForce;
+using TestSwaggerLogin.Model;
 using TestSwaggerLogin.View;
-using TestSwaggerLogin.ViewModel;
 
 namespace TestSwaggerLogin
 {
     /// <summary>
-    ///     Interaction logic for App.xaml
+    /// Interaction logic for App.xaml
     /// </summary>
     public partial class App : Application
     {
-        override protected void OnStartup(StartupEventArgs e)
+        IHost host;
+
+        public App()
         {
+            host = Host.CreateDefaultBuilder()
+                .Add()
+                .Build();
+        }
+
+        override protected async void OnStartup(StartupEventArgs e)
+        {
+            await host.StartAsync();
+            Window window = host.Services.GetRequiredService<MainWindow>();
+            window.Show();
+            
             base.OnStartup(e);
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.DataContext = new MainViewModel();
-            mainWindow.Show();
+        }
+        
+        override protected async void OnExit(ExitEventArgs e)
+        {
+            await host.StopAsync();
+            host.Dispose();
+            
+            base.OnExit(e);
         }
     }
 }

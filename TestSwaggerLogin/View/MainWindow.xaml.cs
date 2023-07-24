@@ -1,14 +1,16 @@
-﻿namespace TestSwaggerLogin.View
+﻿using TestSwaggerLogin.ViewModel;
+
+namespace TestSwaggerLogin.View
 {
     /// <summary>
     ///     Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow
     {
-        public MainWindow()
+        public MainWindow(VmBase viewModel)
         {
             InitializeComponent();
-            //NavigationService nv = MyFrame.NavigationService;
+            DataContext = viewModel;
         }
     }
 }

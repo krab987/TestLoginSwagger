@@ -1,42 +1,28 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using DevExpress.Mvvm;
 using System.Text.Json;
-using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using TestSwaggerLogin.ApiForce;
 using TestSwaggerLogin.Model;
 
 namespace TestSwaggerLogin.ViewModel
 {
-    public class InfoViewModel: ObservableObject
+     public class InfoViewModel: VmBase
     {
-        private string responseMessage;
-        private User currentUser;
-        public User CurrentUser
+        private VmBase allInfo;
+        private VmBase nameSurname;
+        private VmBase current;
+        public VmBase Current
         {
             get
             {
-                return currentUser;
+                return current;
             }
             set
             {
-                currentUser = value;
-                OnPropertyChanged();
-            }
-        }
-        private ObservableObject allInfoVm;
-        private ObservableObject nameSurnameVm;
-        private ObservableObject _currentVm;
-        public ObservableObject CurrentVm
-        {
-            get
-            {
-                return _currentVm;
-            }
-            set
-            {
-                _currentVm = value;
+                current = value;
                 OnPropertyChanged();
             }
         }
@@ -54,38 +40,34 @@ namespace TestSwaggerLogin.ViewModel
             }
         }
         
-        public InfoViewModel(string responseMessage)
+        IMyService _myService;
+        public InfoViewModel (IMyService myService)
         {
-            this.responseMessage = responseMessage;
-            currentUser = JsonSerializer.Deserialize<User>(responseMessage);
-
-            allInfoVm = new AllInfoViewModel(currentUser);
-            nameSurnameVm = new NameSurnameViewModel(currentUser.name, currentUser.surname);
+            _myService = myService;
+            allInfo = new AllInfoViewModel(myService.CurrentUser);
+            nameSurname = new NameSurnameViewModel(myService.CurrentUser.name, myService.CurrentUser.surname);
             
-            CurrentVm = allInfoVm;
+            Current = allInfo;
             FrameOpacity = 1;
-        }
-        public InfoViewModel()
-        {
         }
 
         public ICommand AllInfoCommand
         {
             get
             {
-                return new AsyncCommand(() => ChangePageOpacity(allInfoVm));
+                return new AsyncCommand(() => ChangePageOpacity(allInfo));
             }
         }
         public ICommand NameSurnameCommand
         {
             get
             {
-                return new AsyncCommand(() => ChangePageOpacity(nameSurnameVm));
+                return new AsyncCommand(() => ChangePageOpacity(nameSurname));
             }
         }
 
         
-        private async Task ChangePageOpacity(ObservableObject controlVM)
+        private async Task ChangePageOpacity(VmBase control)
         {
             await Task.Factory.StartNew(() =>
                 {
@@ -94,7 +76,7 @@ namespace TestSwaggerLogin.ViewModel
                         FrameOpacity = i;
                         Thread.Sleep(15);
                     }
-                    CurrentVm = controlVM;
+                    Current = control;
                     for (double i = 0.4; i < 1.1; i += 0.1)
                     {
                         FrameOpacity = i;

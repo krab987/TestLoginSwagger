@@ -60,21 +60,17 @@
               "target": "Package",
               "version": "[4.10.0-ci317, )"
             },
-            "Microsoft.AspNetCore.Http.Abstractions": {
-              "target": "Package",
-              "version": "[2.2.0, )"
-            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[8.0.0-preview.6.23329.7, )"
             },
-            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+            "Microsoft.Extensions.Hosting": {
               "target": "Package",
               "version": "[8.0.0-preview.6.23329.7, )"
             },
-            "Microsoft.VisualStudio.Designer.Interfaces": {
+            "Microsoft.Extensions.Http": {
               "target": "Package",
-              "version": "[17.6.36389, )"
+              "version": "[8.0.0-preview.6.23329.7, )"
             },
             "ModernUI.WPF": {
               "target": "Package",
@@ -83,10 +79,6 @@
             "NSwag.SwaggerGeneration": {
               "target": "Package",
               "version": "[12.3.0, )"
-            },
-            "System.Runtime.InteropServices": {
-              "target": "Package",
-              "version": "[4.3.0, )"
             },
             "System.Text.Json": {
               "target": "Package",

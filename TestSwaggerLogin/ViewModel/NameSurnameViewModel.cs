@@ -1,8 +1,6 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-
-namespace TestSwaggerLogin.ViewModel
+﻿namespace TestSwaggerLogin.ViewModel
 {
-    public class NameSurnameViewModel: ObservableObject
+    public class NameSurnameViewModel: VmBase
     {
         private string name;
         public string Name
@@ -33,8 +31,8 @@ namespace TestSwaggerLogin.ViewModel
         
         public NameSurnameViewModel(string currentUserName, string currentUserSurname)
         {
-           Name = currentUserName;
-           Surname = currentUserSurname;
+            Name = currentUserName;
+            Surname = currentUserSurname;
         }
         public NameSurnameViewModel()
         {
