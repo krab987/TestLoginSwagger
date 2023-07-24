@@ -16,9 +16,17 @@ namespace TestSwaggerLogin.ViewModel
         {
             this.viewModelFactory = viewModelFactory;
             this.navigator = navigator;
-            
+            navigator.StateChanged += () => OnPropertyChanged(nameof(CurrentViewModel));
+
             UpdateViewModelCommand = new UpdateViewModelCommand(navigator, viewModelFactory);
             UpdateViewModelCommand.Execute(ViewType.Login);
+        }
+        
+        public override void Dispose()
+        {
+            navigator.StateChanged -= () => OnPropertyChanged(nameof(CurrentViewModel));
+
+            base.Dispose();
         }
     }
     

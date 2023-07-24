@@ -19,11 +19,14 @@ namespace TestSwaggerLogin.ApiForce
                 services.AddSingleton<IViewModelFactory, ViewModelFactory>();
 
                 services.AddTransient<MainViewModel>();
-                services.AddTransient(CreateInfoViewModel);
+                //services.AddTransient(CreateInfoViewModel);
                 
                 services.AddSingleton<CreateViewModel<LoginViewModel>>(services => () => CreateLoginViewModel(services));
-                services.AddSingleton<CreateViewModel<InfoViewModel>>(services => () => services.GetRequiredService<InfoViewModel>());
+                services.AddSingleton<CreateViewModel<InfoViewModel>>(services => () => CreateInfoViewModel(services));
                 // services.AddSingleton<CreateViewModel<InfoViewModel>>(services => () => new InfoViewModel(services.GetRequiredService<IMyService>()));
+                
+                services.AddSingleton<IMyService, MyService>();
+                services.AddSingleton<INavigator, Navigator>();
                 
                 services.AddSingleton<ViewModelNavigator<InfoViewModel>>();
                 services.AddSingleton<ViewModelNavigator<LoginViewModel>>();
@@ -31,8 +34,7 @@ namespace TestSwaggerLogin.ApiForce
                 
                 services.AddSingleton<MainWindow>(s => new MainWindow(s.GetRequiredService<MainViewModel>()));
                 
-                services.AddSingleton<IMyService, MyService>();
-                services.AddSingleton<INavigator, Navigator>();
+                
             });
 
             return host;

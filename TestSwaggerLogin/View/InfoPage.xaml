@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:viewModel="clr-namespace:TestSwaggerLogin.ViewModel"
       mc:Ignorable="d"
-      Title="InfoPage" Height="450" Width="800">
+      Title="InfoPage" Height="450" Width="800" d:DataContext="{d:DesignInstance viewModel:InfoViewModel }">
     
     <Grid>
         <Grid.ColumnDefinitions>
@@ -22,7 +22,7 @@
         <Frame Grid.Column="1"
                Margin="20,10,20,0"
                NavigationUIVisibility="Hidden"
-               Content="{Binding CurrentVm}"
+               Content="{Binding Current}"
                Opacity="{Binding  FrameOpacity}" />
     </Grid>
 </Page>

@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:viewModel="clr-namespace:TestSwaggerLogin.ViewModel"
       mc:Ignorable="d"
-      Title="AllInfoPage" Height="450" Width="800">
+      Title="AllInfoPage" Height="450" Width="800" d:DataContext="{d:DesignInstance viewModel:AllInfoViewModel }">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
